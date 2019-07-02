@@ -6,5 +6,12 @@
 		<div>
 			<h1>A bookshelf with reading, read, to read, and abandoned books</h1>
 		</div>
+		{% for book in books %}
+		<div>
+				 <p>title: {{ book.title }} </p>
+				 <p>author: {{book.author}} </p>
+				 <p>start date: {{book.start_date}} </p>
+			 </div>
+		{% endfor %}
 	</body>
 </html>
