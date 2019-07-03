@@ -1,17 +1,9 @@
-<html>
-	<head>
-		<title>Codewordjmax: Books</title>
-	</head>
-	<body>
-		<div>
-			<h1>A bookshelf with reading, read, to read, and abandoned books</h1>
-		</div>
+{% extends 'books/base.html' %}
+{% block content %}
 		{% for book in books %}
 		<div>
-				 <p>title: {{ book.title }} </p>
-				 <p>author: {{book.author}} </p>
-				 <p>start date: {{book.start_date}} </p>
-			 </div>
+				 <a href= "{% url 'book_detail' pk=book.pk %}">{{ book.title }} </a>
+		 </div>
 		{% endfor %}
-	</body>
-</html>
+{% endblock %}
+
