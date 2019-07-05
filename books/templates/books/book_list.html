@@ -1,9 +1,13 @@
 {% extends 'books/base.html' %}
 {% block content %}
-		{% for book in books %}
-		<div>
+	<div class='shelf'>
+
+	{% for book in books %}
+			<div class='book {{book.genre|cut:" "}}'>
 				 <a href= "{% url 'book_detail' pk=book.pk %}">{{ book.title }} </a>
-		 </div>
-		{% endfor %}
+			</div>
+	{% endfor %}
+
+	</div>
 {% endblock %}
 
