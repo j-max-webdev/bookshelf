@@ -6,7 +6,7 @@ from django.shortcuts import redirect
 
 # Create your views here.
 def book_list(request):
-	books = Book.objects.order_by('start_date')
+	books = Book.objects.order_by('-start_date')
 	return render(request, 'books/book_list.html', {'books':books})
 
 def book_detail(request, pk):

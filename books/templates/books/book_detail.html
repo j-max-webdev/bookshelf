@@ -8,8 +8,8 @@
         <h1>{{ book.title }}</h1>
         <h3>{{ book.author }}</h3>
 				<p>{{ book.book_notes }} </p>
-				<p>Started: {{book.start_date.day}},  {{book.start_date.month}}  </p>
-				<p>Finished: {{ book.end_date }}| </p>
+				<p>Started: {{ book.start_date|date:"D M d Y"}}
+				<p>Finished: {{ book.end_date|date:"D M d Y" }} </p>
 				<p>Genre: {{ book.genre }} </p>
 				<p>Rating: {{ book.rating }} </p>
     </div>
